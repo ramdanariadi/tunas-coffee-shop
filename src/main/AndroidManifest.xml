@@ -15,6 +15,7 @@
         <activity android:name=".SignUpActivity"/>
         <activity android:name=".ForgotPasswordActivity"/>
         <activity android:name=".OrderActivity"/>
+        <activity android:name=".AssemblageActivity"/>
         <activity
             android:name=".SplashActivity"
             android:exported="true">
