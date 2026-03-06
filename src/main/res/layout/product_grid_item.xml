@@ -9,7 +9,7 @@
 
     <ImageView
         android:id="@+id/category_image"
-        android:src="@drawable/coffee_bean"
+        android:src="@drawable/coffee_bean_small_disabled"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="2"/>
