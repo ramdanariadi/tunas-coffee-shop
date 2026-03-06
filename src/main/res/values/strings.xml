@@ -31,4 +31,14 @@
     <string name="next">Next</string>
     <string name="one">One</string>
     <string name="two">Two</string>
+    <string name="select_barista">Select barista</string>
+    <string name="coffee_type">Coffee type</string>
+    <string name="arabica">Arabica</string>
+    <string name="robusta">Robusta</string>
+    <string name="coffee_sort">Coffee sort</string>
+    <string name="roasting">Roasting</string>
+    <string name="milk">Milk</string>
+    <string name="syrup">Syrup</string>
+    <string name="additives">Additives</string>
+    <string name="ice">Ice</string>
 </resources>
