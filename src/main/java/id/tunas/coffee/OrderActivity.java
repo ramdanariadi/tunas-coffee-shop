@@ -1,5 +1,6 @@
 package id.tunas.coffee;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -47,14 +48,9 @@ public class OrderActivity extends AppCompatActivity {
 
         initVolumeMap();
 
-        LinearLayout smallVolumeCupLL = findViewById(R.id.volume_s_container);
-        smallVolumeCupLL.setOnClickListener(view -> volumeChange(view.getId()));
-
-        LinearLayout mediumVolumeCupLL = findViewById(R.id.volume_m_container);
-        mediumVolumeCupLL.setOnClickListener(view -> volumeChange(view.getId()));
-
-        LinearLayout largeVolumeCupLL = findViewById(R.id.volume_l_container);
-        largeVolumeCupLL.setOnClickListener(view -> volumeChange(view.getId()));
+        findViewById(R.id.volume_s_container).setOnClickListener(view -> volumeChange(view.getId()));
+        findViewById(R.id.volume_m_container).setOnClickListener(view -> volumeChange(view.getId()));
+        findViewById(R.id.volume_l_container).setOnClickListener(view -> volumeChange(view.getId()));
 
         TextClock textClock = findViewById(R.id.textClock);
         textClock.setOnClickListener(view -> {
@@ -64,6 +60,11 @@ public class OrderActivity extends AppCompatActivity {
                     .build();
 
             timePicker.show(getSupportFragmentManager(), "TIME_PICKER");
+        });
+
+        findViewById(R.id.assemblage).setOnClickListener(view -> {
+            Intent assemblageIntent = new Intent(this, AssemblageActivity.class);
+            startActivity(assemblageIntent);
         });
     }
 
