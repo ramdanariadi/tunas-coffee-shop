@@ -2,12 +2,15 @@ package id.tunas.coffee;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 public class AssemblageActivity extends AppCompatActivity {
 
@@ -33,7 +36,19 @@ public class AssemblageActivity extends AppCompatActivity {
                 }
         );
 
-        Intent intent = new Intent(this, SelectBaristaActivity.class);
-        selectBaristaLauncher.launch(intent);
+        findViewById(R.id.select_barista_btn).setOnClickListener(view -> {
+            Intent intent = new Intent(this, SelectBaristaActivity.class);
+            selectBaristaLauncher.launch(intent);
+        });
+
+        BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this, R.style.CustomBottomSheetDialog);
+        View v = getLayoutInflater().inflate(R.layout.milk_layout, null);
+        bottomSheetDialog.setContentView(v);
+
+        v.findViewById(R.id.cancel_select_milk).setOnClickListener(view -> bottomSheetDialog.dismiss());
+
+        findViewById(R.id.select_milk).setOnClickListener(view -> {
+            bottomSheetDialog.show();
+        });
     }
 }
