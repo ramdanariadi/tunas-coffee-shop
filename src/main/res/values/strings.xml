@@ -41,4 +41,7 @@
     <string name="syrup">Syrup</string>
     <string name="additives">Additives</string>
     <string name="ice">Ice</string>
+    <string name="top_barista">Top Barista</string>
+    <string name="default_barista_name">Victor</string>
+    <string name="select_a_barista">Select a barista</string>
 </resources>
