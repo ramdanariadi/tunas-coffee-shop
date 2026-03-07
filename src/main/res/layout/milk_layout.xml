@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@android:color/transparent"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginBottom="32dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:background="@drawable/white_bg_all_rounded"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="18dp"
+            android:gravity="center"
+            android:text="What type of milk do you prefer?"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_border"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="18dp"
+            android:textAppearance="@style/order_specification_title"
+            android:gravity="center"
+            android:text="None"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_border"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="18dp"
+            android:textAppearance="@style/order_specification_title"
+            android:gravity="center"
+            android:text="Cow's"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_border"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="18dp"
+            android:textAppearance="@style/order_specification_title"
+            android:gravity="center"
+            android:text="Lactose-free"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_border"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="18dp"
+            android:textAppearance="@style/order_specification_title"
+            android:gravity="center"
+            android:text="Skimmed"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/cancel_select_milk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="18dp"
+        android:background="@drawable/white_bg_all_rounded"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="20dp"
+        android:textColor="@color/dark_blue"
+        android:text="@string/cancel"/>
+
+</LinearLayout>
