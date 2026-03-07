@@ -39,7 +39,7 @@
     <LinearLayout
         android:id="@+id/product_image"
         app:layout_constraintTop_toBottomOf="@+id/nav_bar"
-        android:background="@drawable/white_bg_all_rounded"
+        android:background="@drawable/my_white_bg_all_rounded"
         android:gravity="center"
         android:layout_marginHorizontal="25dp"
         android:layout_marginTop="19dp"
@@ -49,7 +49,7 @@
         <ImageView
             android:layout_width="152dp"
             android:layout_height="121dp"
-            android:src="@drawable/my_white_bg_all_rounded"/>
+            android:src="@drawable/card_white_bg_all_rounded"/>
 
     </LinearLayout>
 

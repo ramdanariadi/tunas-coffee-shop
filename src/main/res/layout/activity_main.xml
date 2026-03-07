@@ -104,7 +104,7 @@
             android:layout_width="match_parent"
             android:layout_height="67.66dp"
             android:layout_gravity="center_vertical"
-            android:background="@drawable/white_bg_all_rounded"
+            android:background="@drawable/my_white_bg_all_rounded"
             android:gravity="center_vertical"
             android:orientation="horizontal"
             android:layout_marginHorizontal="20dp"
