@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:paddingVertical="22dp"
     android:gravity="center_horizontal"
-    android:background="@drawable/white_bg_all_rounded">
+    android:background="@drawable/my_white_bg_all_rounded">
 
     <ImageView
         android:id="@+id/category_image"
