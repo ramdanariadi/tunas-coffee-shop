@@ -44,4 +44,5 @@
     <string name="top_barista">Top Barista</string>
     <string name="default_barista_name">Victor</string>
     <string name="select_a_barista">Select a barista</string>
+    <string name="cancel">Cancel</string>
 </resources>
