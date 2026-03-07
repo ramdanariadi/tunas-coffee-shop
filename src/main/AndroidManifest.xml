@@ -16,6 +16,7 @@
         <activity android:name=".ForgotPasswordActivity"/>
         <activity android:name=".OrderActivity"/>
         <activity android:name=".AssemblageActivity"/>
+        <activity android:name=".SelectBaristaActivity"/>
         <activity
             android:name=".SplashActivity"
             android:exported="true">
