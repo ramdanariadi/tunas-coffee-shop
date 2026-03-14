@@ -17,7 +17,11 @@ public class SelectBaristaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_barista);
 
-        findViewById(R.id.arrow_left).setOnClickListener(view -> finish());
+        findViewById(R.id.arrow_left).setOnClickListener(view -> {
+            Intent intent = new Intent();
+            setResult(RESULT_OK, intent);
+            finish();
+        });
         RecyclerView baristaRc = findViewById(R.id.barista_rc);
         BaristaListAdapter baristaListAdapter = new BaristaListAdapter(Barista.createDummy(), barista -> {
             Intent intent = new Intent();
