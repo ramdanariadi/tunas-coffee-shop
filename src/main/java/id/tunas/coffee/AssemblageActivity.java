@@ -9,6 +9,8 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.common.base.Strings;
+
 public class AssemblageActivity extends AppCompatActivity {
 
     private String baristaName;
@@ -24,16 +26,20 @@ public class AssemblageActivity extends AppCompatActivity {
         ActivityResultLauncher<Intent> selectBaristaLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
                 result -> {
-                    this.baristaId = result.getData().getStringExtra("barista_id");
-                    this.baristaName = result.getData().getStringExtra("barista_name");
-                    TextView selectBaristaTitle = findViewById(R.id.select_barista_title);
-                    StringBuilder sb = new StringBuilder(getString(R.string.select_barista));
-                    sb.append(" - ").append(this.baristaName);
-                    selectBaristaTitle.setText(sb.toString());
+                    String baristaId = result.getData().getStringExtra("barista_id");
+                    String baristaName = result.getData().getStringExtra("barista_name");
+                    if(!Strings.isNullOrEmpty(baristaId) && !Strings.isNullOrEmpty(baristaName)){
+                        this.baristaId = baristaId;
+                        this.baristaName = baristaName;
+                        TextView selectBaristaTitle = findViewById(R.id.select_barista_title);
+                        StringBuilder sb = new StringBuilder(getString(R.string.select_barista));
+                        sb.append(" - ").append(this.baristaName);
+                        selectBaristaTitle.setText(sb.toString());
+                    }
                 }
         );
 
         Intent intent = new Intent(this, SelectBaristaActivity.class);
-        selectBaristaLauncher.launch(intent);
+        findViewById(R.id.select_barista).setOnClickListener(view -> selectBaristaLauncher.launch(intent));
     }
 }
