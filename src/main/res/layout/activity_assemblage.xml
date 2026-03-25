@@ -333,7 +333,7 @@
                 android:text="@string/milk"/>
 
             <TextView
-                android:id="@+id/select_milk"
+                android:id="@+id/select_milk_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="@style/order_specification_title"
@@ -516,6 +516,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/bottom_side"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="19dp"
@@ -556,6 +557,54 @@
             android:textColor="@color/card_white"
             android:paddingVertical="11dp"
             />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/slider"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="350dp"
+        android:paddingHorizontal="36dp"
+        android:background="@drawable/bg_top_rounded_purple"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="48dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/previous_slider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Previous"
+                android:textAppearance="@style/name"
+                android:textColor="@color/card_white"/>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabIndicator"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:tabIndicatorHeight="4dp"
+                app:tabIndicatorColor="@color/card_white"/>
+            <TextView
+                android:id="@+id/next_slider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Next"
+                android:textAppearance="@style/name"
+                android:textColor="@color/card_white"/>
+        </LinearLayout>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
