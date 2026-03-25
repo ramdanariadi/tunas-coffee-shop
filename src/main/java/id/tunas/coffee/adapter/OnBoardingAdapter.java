@@ -16,7 +16,7 @@ import id.tunas.coffee.dto.OnBoardingItem;
 
 public class OnBoardingAdapter extends RecyclerView.Adapter<OnBoardingAdapter.OnboardingViewHolder>{
 
-    List<OnBoardingItem> items;
+    private final List<OnBoardingItem> items;
 
     public OnBoardingAdapter(List<OnBoardingItem> items) {
         this.items = items;
