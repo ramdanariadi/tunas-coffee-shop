@@ -51,7 +51,7 @@ public class BaristaListAdapter extends RecyclerView.Adapter<BaristaListAdapter.
         return baristas.size();
     }
 
-    public class BaristaViewHolder extends RecyclerView.ViewHolder {
+    public static class BaristaViewHolder extends RecyclerView.ViewHolder {
         private TextView name;
         private ImageView img;
         private ImageView badge;
