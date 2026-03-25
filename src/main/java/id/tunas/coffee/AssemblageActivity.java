@@ -9,9 +9,16 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
+import androidx.viewpager2.widget.ViewPager2;
 
+import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 import com.google.common.base.Strings;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
+
+import id.tunas.coffee.adapter.OnBoardingAdapter;
+import id.tunas.coffee.dto.OnBoardingItem;
 
 public class AssemblageActivity extends AppCompatActivity {
 
@@ -55,5 +62,14 @@ public class AssemblageActivity extends AppCompatActivity {
         findViewById(R.id.select_milk).setOnClickListener(view -> {
             bottomSheetDialog.show();
         });
+
+        OnBoardingAdapter onBoardingAdapter = new OnBoardingAdapter(OnBoardingItem.createDummy());
+        ViewPager2 viewPager = findViewById(R.id.viewPager);
+        TabLayout tabIndicator = findViewById(R.id.tabIndicator);
+        viewPager.setAdapter(onBoardingAdapter);
+        TabLayoutMediator tabLayoutMediator = new TabLayoutMediator(tabIndicator, viewPager, (tab, i) -> {
+        });
+        tabLayoutMediator.attach();
+
     }
 }
