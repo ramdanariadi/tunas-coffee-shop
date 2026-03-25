@@ -1,6 +1,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="288dp"
+    android:layout_height="match_parent"
     android:background="@drawable/bg_top_rounded_purple"
     android:gravity="center"
     android:orientation="vertical">
@@ -25,8 +25,8 @@
         android:layout_height="0dp"
         android:layout_marginTop="30dp"
         android:textAppearance="@style/a_blend_of_"
-        android:lineSpacingExtra="-6sp"
+        android:lineSpacingExtra="6sp"
         android:text="Description"
-        android:gravity="start|bottom"
+        android:gravity="start"
         />
 </LinearLayout>
