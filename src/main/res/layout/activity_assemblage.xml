@@ -586,16 +586,27 @@
                 android:layout_height="wrap_content"
                 android:text="Previous"
                 android:textAppearance="@style/name"
-                android:textColor="@color/card_white"/>
+                android:textColor="@color/grey_border"/>
 
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tabIndicator"
+            <LinearLayout
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                app:tabIndicatorHeight="4dp"
-                app:tabIndicatorColor="@color/card_white"/>
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabIndicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:tabIndicatorHeight="0dp"
+                    app:tabIndicatorGravity="center"
+                    app:tabRippleColor="@android:color/transparent"
+                    app:tabIndicatorColor="@color/card_white"/>
+
+            </LinearLayout>
+
             <TextView
                 android:id="@+id/next_slider"
                 android:layout_width="wrap_content"
